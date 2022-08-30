@@ -1,0 +1,4 @@
+2와 같은 것들은 interger이다 (정수)
+Hello와 같은것들은 정의되지않음. "hello"와 같은 것들이 text라고 할수있음
+"hello" + "My name is imonkfcwifi" 와 같이 처음부터 끝까지 text인것들은 string(문자열) 이다.
+const 는 variable을 만드는 상수
