@@ -6,6 +6,9 @@ const b = 2; (number) vs const b ="2" (text)
 null = 변수에 아무것도 없음
 undefined = 정의되지 않음
 
+arry에는 무언가를 업데이트 가능
+aad[2]="water" 2번째에 추가.
+
 객체이름.프로퍼티이름
 또는
 객체이름["프로퍼티이름"]
@@ -25,3 +28,27 @@ const person = {
 person.name    // 홍길동 // 베리어블.프로퍼티
 person["name"] // 홍길동
 
+function a(arg) {
+	
+}
+a(1);
+위 코드에서 함수 a의 arg가 매개변수(parameter)이고 a(1)으로 함수 a를 호출할 때 1이 인자(argument)입니다.
+argument는 function을 실행하는 동안 어떤 정보를 function에게 보낼 수 있는 방법이다
+
+매개변수는 변수이고, 그 변수에 들어가는 값이 인자입니다.
+
+function(Sayhello){
+
+}
+와
+const abc = {
+    Sayhello: function()
+}
+은 위치만 다르지 같음.
+
+parseInt는 string을 number로 바꿈
+
+.btn 버튼이 있음
+.btn__price 버튼안에 가격 정보가 있음
+.btn--orange 이 버튼의 색상은 orange임
+.btn__price--orange 버튼안에 가격 정보가 있고 이 버튼은 오랜지 색상임.
