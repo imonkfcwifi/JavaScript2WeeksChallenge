@@ -2,3 +2,26 @@
 Hello와 같은것들은 정의되지않음. "hello"와 같은 것들이 text라고 할수있음
 "hello" + "My name is imonkfcwifi" 와 같이 처음부터 끝까지 text인것들은 string(문자열) 이다.
 const 는 variable을 만드는 상수
+const b = 2; (number) vs const b ="2" (text)
+null = 변수에 아무것도 없음
+undefined = 정의되지 않음
+
+객체이름.프로퍼티이름
+또는
+객체이름["프로퍼티이름"]
+const person = {
+
+    name: "홍길동",      // 이름 프로퍼티를 정의함.
+    birthday: "030219",  // 생년월일 프로퍼티를 정의함.
+    pId: "1234567",      // 개인 id 프로퍼티를 정의함.
+    fullId: function() 
+    { // 생년월일과 개인 id를 합쳐서 주민등록번호를 반환함.
+        return this.birthday + this.pId;
+
+    }
+
+};
+
+person.name    // 홍길동 // 베리어블.프로퍼티
+person["name"] // 홍길동
+
