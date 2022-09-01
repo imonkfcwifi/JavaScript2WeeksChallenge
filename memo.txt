@@ -52,3 +52,8 @@ parseInt는 string을 number로 바꿈
 .btn__price 버튼안에 가격 정보가 있음
 .btn--orange 이 버튼의 색상은 orange임
 .btn__price--orange 버튼안에 가격 정보가 있고 이 버튼은 오랜지 색상임.
+
+form이란 사용자가 정보를 입력, 선택할때 사용되는 태그로 서버로 입력한 데이터를 전송할때 사용
+
+document.getElementById or class 로 element를 찾아와서 innertext나 classname 등을 불러오거나 변경 할 수 있게 되었다.
+document.querySelector(".xx y") css처럼 원하는 element를 불러올 수 있음
