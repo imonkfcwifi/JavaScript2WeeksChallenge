@@ -57,3 +57,13 @@ form이란 사용자가 정보를 입력, 선택할때 사용되는 태그로 �
 
 document.getElementById or class 로 element를 찾아와서 innertext나 classname 등을 불러오거나 변경 할 수 있게 되었다.
 document.querySelector(".xx y") css처럼 원하는 element를 불러올 수 있음
+
+즉 const로 정의한 document.querySelector(".xx y")에
+addeventlistner로 (특정기능,실행) 이다.
+
+1. element를 찾아라
+2. event를 listen해라
+3. 그 event를 반응해라
+
+style 작업은 css 파일에
+animation은 javascript에//
