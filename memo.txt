@@ -67,3 +67,6 @@ addeventlistner로 (특정기능,실행) 이다.
 
 style 작업은 css 파일에
 animation은 javascript에//
+
+What object do we use to access HTML from JS? : document
+What is the difference between using className and classList : classList replaces all classes, className doesn't
