@@ -7,10 +7,11 @@ const result = document.querySelector(".result");
 function handlerRangeInput() {
     const rangeNum = LottoInput.value;
     DestinyInput.setAttribute("max", rangeNum);
+    // max로 최대
 }
 
 LottoForm.addEventListener("input", handlerRangeInput);
-
+// 입력(숫자나 문자) 즉시 (input) eventlisten
 function handlerSubmit(event) {
     event.preventDefault();
     const rangeNum = LottoInput.value;
@@ -20,7 +21,7 @@ function handlerSubmit(event) {
 }
 
 DestinyForm.addEventListener("submit", handlerSubmit);
-
+// 눌렀을때 (submit) eventlisten
 
 function paintResult(chooseNum, randomNum) {
 
