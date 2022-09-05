@@ -1,28 +1,12 @@
-const widthControl = document.body;
+const loginInput = document.querySelector("#login-form input");
+const loginForm = document.querySelector("#login-form");
 
-const violet = "violet";
-const yellow = "yellow";
-const blue = "blue";
-
-function handleControlAnimation() {
-    const inner = window.innerWidth;
-
-    if (inner > 1400) {
-        widthControl.classList.add(violet);
-        widthControl.classList.remove(yellow);
-
-    }
-
-    else if (inner <= 1400 && inner > 500) {
-        widthControl.classList.add(yellow);
-        widthControl.classList.remove(violet, blue);
-    }
-
-    else {
-        widthControl.classList.add(blue);
-        widthControl.classList.remove(yellow);
-    }
+function handleSubmit(blabla) {
+    blabla.preventDefault();
+    console.log(blabla);
 }
+loginForm.addEventListener("submit", handleSubmit);
 
-window.addEventListener("resize", handleControlAnimation);
-
+// 사실 브라우저는 function () <- 괄호 안에서 information을 주고있다
+// JS는 submit 인자를 호출할시 function의 ( ) 안에 event object가 담긴 정보들을 제공한다
+// 여기에서 preventDefault 의 함수를 추가함으로서 submit이 새로고침(페이지) 되는 현상을 막을 수 있다.

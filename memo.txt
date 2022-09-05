@@ -70,3 +70,5 @@ animation은 javascript에//
 
 What object do we use to access HTML from JS? : document
 What is the difference between using className and classList : classList replaces all classes, className doesn't
+
+html에서 input의 유효성 검사를 작동시키기 위해서는 form 안에 위치해야함.
