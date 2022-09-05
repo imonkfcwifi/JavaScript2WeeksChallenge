@@ -1,31 +1,38 @@
-const number = document.querySelector(".number");
-const yourNumber = document.querySelector(".your_number");
-const choose = document.querySelector(".choose");
+const LottoForm = document.querySelector(".LottoForm");
+const LottoInput = document.querySelector(".LottoInput");
+const DestinyForm = document.querySelector(".DestinyForm");
+const DestinyInput = document.querySelector(".DestinyInput");
 const result = document.querySelector(".result");
-const todaysNumber = [Math.floor(Math.random() * 10)];
-const random = document.querySelector(".random");
 
-
-
-function GameOver(event) {
-    event.preventDefault();
-    const YourNumberValue = yourNumber.value;
-    localStorage.setItem("number", YourNumberValue);
-    GameOver(YourNumberValue);
-
-    if (YourNumberValue === todaysNumber) {
-        choose.innerText = `This is your ${YourNumberValue}`;
-        random.innerText = `Your Destiny is.. ${todaysNumber}`;
-        result.innerHTML = "you win"
-    }
-
-    else {
-        choose.innerText = `This is your ${YourNumberValue}`;
-        random.innerText = `Your Destiny is.. ${todaysNumber}`;
-        result.innerHTML = "You lose"
-    }
+function handlerRangeInput() {
+    const rangeNum = LottoInput.value;
+    DestinyInput.setAttribute("max", rangeNum);
 }
 
-number.addEventListener("submit", GameOver);
-// choose.innerText = `This is your ${NUMBER_VALUE}`;
-// result.innerText = `Your Destiny is.. ${RESULT_VALUE}`;
+LottoForm.addEventListener("input", handlerRangeInput);
+
+function handlerSubmit(event) {
+    event.preventDefault();
+    const rangeNum = LottoInput.value;
+    const chooseNum = DestinyInput.value;
+    const randomNum = Math.floor(Math.random() * rangeNum + 1);
+    paintResult(chooseNum, randomNum)
+}
+
+DestinyForm.addEventListener("submit", handlerSubmit);
+
+
+function paintResult(chooseNum, randomNum) {
+
+    if (parseInt(chooseNum) === randomNum) {
+        result.innerText = `You chose: ${chooseNum}, the machine chose: ${randomNum} You win`
+    }
+
+    else if (chooseNum < 0, randomNum < 0) {
+        result.innerText = `write the right number`
+    }
+    else {
+        result.innerText = `You chose: ${chooseNum}, the machine chose: ${randomNum} You lose the money`
+
+    }
+}
