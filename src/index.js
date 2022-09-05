@@ -25,14 +25,16 @@ DestinyForm.addEventListener("submit", handlerSubmit);
 function paintResult(chooseNum, randomNum) {
 
     if (parseInt(chooseNum) === randomNum) {
-        result.innerText = `You chose: ${chooseNum}, the machine chose: ${randomNum} You win`
+        result.innerText = `You chose: ${chooseNum}, 
+        the machine chose: ${randomNum} You win`
     }
 
     else if (chooseNum < 0, randomNum < 0) {
         result.innerText = `write the right number`
     }
     else {
-        result.innerText = `You chose: ${chooseNum}, the machine chose: ${randomNum} You lose the money`
+        result.innerText = `You chose: ${chooseNum}, 
+        the machine chose: ${randomNum} You lose the money`
 
     }
 }
