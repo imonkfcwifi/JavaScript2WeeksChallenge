@@ -1,0 +1,8 @@
+.rick,
+.timer,
+.rickroll,
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
