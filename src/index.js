@@ -1,24 +1,33 @@
-const timerCount = document.querySelector(".timer");
-const rick = document.querySelector("#rick");
-function day() {
-    const XmasDay = new Date("2022-12-25");
-    const toDay = new Date();
+const body = document.querySelector("body");
+const btn = document.querySelector("button");
 
-    const dDay = XmasDay - toDay;
+const colors = [
+    "#ef5777",
+    "#575fcf",
+    "#4bcffa",
+    "#34e7e4",
+    "#0be881",
+    "#f53b57",
+    "#3c40c6",
+    "#0fbcf9",
+    "#00d8d6",
+    "#05c46b",
+    "#ffc048",
+    "#ffdd59",
+    "#ff5e57",
+    "#d2dae2",
+    "#485460",
+    "#ffa801",
+    "#ffd32a",
+    "#ff3f34"
+];
 
-    const dDayDay = Math.floor(dDay / (1000 * 60 * 60 * 24));
-    const dDayHour = Math.floor((dDay / (1000 * 60 * 60)) % 24);
-    const dDayMin = Math.floor((dDay / (1000 * 60)) % 60);
-    const dDaySec = Math.floor(dDay / 1000 % 60);
+function colorChanger() {
+    const first = colors[Math.floor(Math.random() * colors.length)];
 
-    timerCount.innerText = `${dDayDay}일 ${dDayHour}시간 ${dDayMin}분 ${dDaySec} 초 남았습니다.`
+    const seconds = colors[Math.floor(Math.random() * colors.length)];
 
-    const dDayDayrick = Math.floor((dDay / (1000 * 60 * 24)));
-    const dDayHourrick = Math.floor((dDay / (1000 * 60)));
-    const dDayMinrick = Math.floor((dDay / (1000 * 60 * 60 * 60)));
-
-    const hap = dDayDayrick + dDayHourrick + dDayMinrick;
-    rick.innerHTML = `대략 남은 릭 롤링 횟수 ${hap} 회`
+    body.style.backgroundImage = `linear-gradient(${first},${seconds})`;
 }
-day();
-setInterval(day, 1000);
+
+btn.addEventListener("click", colorChanger);
