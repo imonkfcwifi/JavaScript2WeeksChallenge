@@ -1,7 +1,7 @@
 const timerCount = document.querySelector(".timer");
 const rick = document.querySelector("#rick");
 function day() {
-    const XmasDay = new Date("2022-12-25");
+    const XmasDay = new Date("2023-12-25");
     const toDay = new Date();
 
     const dDay = XmasDay - toDay;
